@@ -1,6 +1,6 @@
 <?php
 
-namespace Admin\Providers;
+namespace Module\Admin\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Admin\Http\Controllers';
+    protected $namespace = 'Module\Admin\Http\Controllers';
 
     /**
      * The path to the "home" route for your application.
@@ -61,7 +61,7 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
              ->namespace($this->namespace)
              ->prefix('admin')
-             ->group(base_path('Admin/routes/web.php'));
+             ->group(base_path('Module\Admin/routes/web.php'));
     }
 
     /**

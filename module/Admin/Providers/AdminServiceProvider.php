@@ -1,6 +1,6 @@
 <?php
 
-namespace Admin\Providers;
+namespace Module\Admin\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,6 +23,6 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(base_path('Admin/resources/views'),'admin');
+        $this->loadViewsFrom(base_path('module/Admin/resources/views'),'admin');
     }
 }

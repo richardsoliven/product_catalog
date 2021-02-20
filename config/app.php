@@ -174,11 +174,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Admin\Providers\AdminServiceProvider::class,
-        Admin\Providers\AuthServiceProvider::class,
+        Module\Admin\Providers\AdminServiceProvider::class,
+        Module\Admin\Providers\AuthServiceProvider::class,
         // Admin\Providers\BroadcastServiceProvider::class,
-        Admin\Providers\EventServiceProvider::class,
-        Admin\Providers\RouteServiceProvider::class,
+        Module\Admin\Providers\EventServiceProvider::class,
+        Module\Admin\Providers\RouteServiceProvider::class,
 
     ],
 

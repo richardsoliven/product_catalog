@@ -1,9 +1,9 @@
 <?php
 
-namespace Admin\Http\Controllers\Auth;
+namespace Module\Admin\Http\Controllers\Auth;
 
-use Admin\Http\Controllers\Controller;
-use Admin\Providers\RouteServiceProvider;
+use Module\Admin\Http\Controllers\Controller;
+use Module\Admin\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller
