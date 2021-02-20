@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('admin::welcome');
+
+Route::prefix('users')->group(function () {
+    Route::get('/', 'UserController@index')->name('user.index');
+    Route::get('/create', 'UserController@create')->name('user.create');
+    Route::post('/store', 'UserController@store')->name('user.store');
 });
