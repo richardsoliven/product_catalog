@@ -3,6 +3,8 @@
 namespace Module\Admin\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Module\Core\Models\User;
+use Module\Core\Observers\UserObserver;
 
 class AdminServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,7 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(base_path('module/Admin/resources/views'),'admin');
+        $this->loadViewsFrom(base_path('module/Admin/resources/views'), 'admin');
+        User::observe(UserObserver::class);
     }
 }

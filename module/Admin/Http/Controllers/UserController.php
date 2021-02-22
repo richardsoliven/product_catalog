@@ -4,7 +4,7 @@ namespace Module\Admin\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Module\Core\Http\Requests\UserRequest;
-use Module\Core\Model\User;
+use Module\Core\Models\User;
 
 class UserController extends Controller
 {
@@ -53,6 +53,8 @@ class UserController extends Controller
     /**
      * Store User
      *
+     * @param UserRequest $userRequest
+     *
      * @throws \Exception
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -61,7 +63,6 @@ class UserController extends Controller
     {
         try {
             $this->user->fill($userRequest->all());
-
             $this->user->save();
 
             return redirect()
@@ -69,7 +70,7 @@ class UserController extends Controller
                 ->with('status', 'Successfully Inserted!');
         } catch (\Exception $e) {
             echo $e->getMessage();die();
-            throw new \Exception('There is an error in rendering create form');
+            throw new \Exception('There is an error in saving user');
         }
     }
 }
